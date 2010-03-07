@@ -1,0 +1,523 @@
+
+#firstBackground
+{ 	
+	
+	height:320px;
+	width:480px;
+	color: black;
+	background-color: beige;
+}
+
+ 	
+#inputName
+{
+	position: absolute;
+	height: 30px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top: 20px;
+	left: 50px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+.yourName
+{
+	position: absolute;
+	height: 120px;
+	width: 200px;
+	background-color: orange;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top: 80px;
+	left: 150px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+.instructions1
+{
+	position: absolute;
+	height: 120px;
+	width: 200px;
+	background-color: green;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top: 40px;
+	left: 250px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+
+
+#instructions
+{ 	
+	position: absolute;
+	height: 30px;
+	width: 120px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top:20px;
+	left: 340px;
+	color: black;
+	font-family: "Verdana"
+	
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#title
+{ 	
+	position: absolute;	
+ 	border-color: black; 
+ 	font-size: 20pt;
+	top:80px;
+	height: 100px;
+	width: 250px;
+	left: 120px;
+	text-align: center;
+	color: black;
+	font-family: "Verdana"
+}
+
+
+#resumeGame
+{ 	
+	position: absolute;
+	<!--background-image: url('../images/food-pyramid_1.jpg');-->
+	
+	height: 128px;
+	width: 175px;
+ 	font-size: 12pt;
+ 	text-align: center;
+	top: 180px;
+	left: 320px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#resumeGameScore
+{ 	
+	position: absolute;
+	height: 128px;
+	width: 220px;
+ 	font-size: 13pt;
+ 	text-align:center;
+	top: 243px;
+	left: 47px;
+	color: black;
+	font-family: "Verdana"
+	
+}
+
+
+.cart
+{ 	
+	position: absolute;
+	background-image: url('../images/shoppingcart128rightface.png');
+	height: 128px;
+	width: 128px;
+	top:160px;
+	left: 40px;
+	
+}
+
+
+.milkType
+{ 	
+	height: 20px;
+	width: 50px;
+	left: 30px;
+	
+}
+
+
+#oneDay
+{ 	
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top:30px;
+	left: 120px;
+	color: black;
+	font-family: "Verdana"
+	
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+
+#oneWeek
+{ 	
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top:30px;
+	left: 240px;
+	color: black;
+	font-family: "Verdana"
+	
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#oneMonth
+{ 	
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top:30px;
+	left: 360px;
+	color: black;
+	font-family: "Verdana"
+	
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#timer
+{
+	position: absolute;
+	height: 10px;
+	width: 20px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 6pt;
+ 	text-align: center;
+	top: 10px;
+	left: 360px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#score
+{
+	position: absolute;
+	height: 10px;
+	width: 30px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 6pt;
+ 	text-align: center;
+	top: 30px;
+	left: 360px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+#milk
+{
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top: 60px;
+	left: 50px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#yogurt
+{ 	
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top:60px;
+	left: 110px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#cheese
+{ 	
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top:60px;
+	left: 170px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#butter
+{ 	
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top:60px;
+	left: 230px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#meats
+{
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top: 60px;
+	left: 50px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#poultry
+{ 	
+	position: absolute;
+	height: 20px;
+	width:55px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top:60px;
+	left: 110px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#fish
+{ 	
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top:60px;
+	left: 175px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#eggs
+{ 	
+	position: absolute;
+	height: 20px;
+	width: 50px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top:60px;
+	left: 235px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#bonusRound
+{
+	position: absolute;
+	height: 25px;
+	width: 70px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: center;
+	top: 10px;
+	left: 370px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+#finalScore
+{
+	position: absolute;
+	height: 25px;
+	width: 150px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: left;
+	top: 40px;
+	left: 150px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+#finalTime
+{ 	
+	position: absolute;
+	height: 25px;
+	width:150px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: left;
+	top:70px;
+	left: 150px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+#finalList
+{ 	
+	position: absolute;
+	height: 25px;
+	width: 150px;
+	background-color: tan;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 8pt;
+ 	text-align: left;
+	top:100px;
+	left: 150px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
+.milkList
+{ 	
+	position: absolute;
+	height: 80px;
+	width: 60px;
+	background-color: yellow;
+	padding: 2px 2px 2px 2px; 
+ 	border-style: solid; 
+ 	border-width: 2px;
+ 	border-color: black; 
+ 	font-size: 10pt;
+ 	text-align: center;
+	top: 40px;
+	left: 50px;
+	color: black;
+	font-family: "Verdana"
+	margin: 6px 4px 6px 6px;
+	-webkit-border-radius: 4px;
+}
+
