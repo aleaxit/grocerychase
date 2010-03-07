@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Timer</title>
+    <style>
+      span.big {
+        font-size: 80px;
+        text-align: center;
+        padding: 5px;
+      }
+      button.big {
+        font-size: 33px;
+      }
+      button.plumin {
+        font-size: 33px;
+        width: 44px;
+        background-color: green;
+      }
+      button.plumindis {
+        font-size: 33px;
+        width: 44px;
+        background-color: red;
+      }
+      div.box { 
+        position: fixed;
+        left: 5px;
+        width: 320px;
+        margin: 5px;
+      }
+      div.subbox {
+        width: 20px;
+        left: 5px;
+        float: left;
+        margin-top: 10px;
+        margin-right: 20px;
+        display: inline;
+      }
+      .blahdiv {
+        margin-left: 100px;
+        padding-left: 100px;
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var thetim;
+      var plubut;
+      var minbut;
+
+      var maxval = 300;
+      var curval = 0;
+      var intervalId = 0;
+
+      function showit() {
+        var seconds = Math.floor(curval % 60) + "",
+            minutes=Math.floor((curval/60) % 60) + "";
+        if (seconds.length === 1) {
+          seconds = "0" + seconds;
+        }
+        if (minutes.length === 1) {
+          minutes = "0" + minutes;
+        }
+        thetim.innerHTML = minutes + ":" + seconds;
+      }
+
+      function dostop() {
+        if (intervalId !== 0) {
+          clearInterval(intervalId);
+          intervalId = 0;
+        }
+      }
+
+      function reset() {
+        dostop();
+        curval = maxval;
+        plubut.className = "plumin";
+        minbut.className = "plumin";
+        showit();
+      }
+
+      function plusMinute() {
+        if (intervalId === 0) {
+          maxval += 60;
+          reset();
+        }
+      }
+      function minusMinute() {
+        if (intervalId === 0) {
+          maxval -= 60;
+          reset();
+        }
+      }
+      function tick() {
+        curval -= 1;
+        showit();
+        if (curval === 0) {
+          alert("Timer expired!")
+          dostop();
+        }
+      }
+
+      function dostart() {
+        if (intervalId === 0) {
+          plubut.className = "plumindis";
+          minbut.className = "plumindis";
+          intervalId = setInterval(tick, 1000);
+        }
+      }
+    </script>
+    <div class="box">
+      <button class="big" type="button" onclick="reset();">Reset</button>
+      <button class="big" type="button" onclick="dostart();">Start</button>
+      <button class="big" type="button" onclick="dostop();">Stop</button>
+      <div class="subbox">
+        <button class="plumin" id="plubut"
+                type="button" onclick="plusMinute();">+</button>
+        <button class="plumin" id="minbut"
+                type="button" onclick="minusMinute();">-</button>
+      </div>
+      <div class="blahdiv">
+        <span class="big">&nbsp;</span><span class="big" id="thetim">MM:SS</span>
+      </div>
+
+
+    <script>
+      thetim = document.getElementById("thetim");
+      plubut = document.getElementById("plubut");
+      minbut = document.getElementById("minbut");
+
+      reset();
+    </script>
+
+    </div>
+
+  </body>
+</html>
