@@ -125,20 +125,22 @@ div.resumeGame
   -webkit-border-radius: 4px;
 }
 
-#resumeGameScore
+.score
 {
-  position: absolute;
   height: 128px;
   width: 220px;
   font-size: 13pt;
   text-align:center;
-  top: 243px;
-  left: 47px;
   color: black;
   font-family: "Verdana"
-
 }
 
+#score, #score1
+{
+  position: absolute;
+  top: 243px;
+  left: 47px;
+}
 
 .cart
 {
@@ -148,7 +150,6 @@ div.resumeGame
   width: 128px;
   top:160px;
   left: 40px;
-
 }
 
 
@@ -157,7 +158,6 @@ div.resumeGame
   height: 20px;
   width: 50px;
   left: 30px;
-
 }
 
 
