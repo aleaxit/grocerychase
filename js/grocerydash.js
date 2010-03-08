@@ -133,7 +133,7 @@ function instructionsWasTapped()
 
 function nameWasTapped()
 {
-  $("#firstBackground").append('<div class="yourName" id="name1">Enter Your Name<input id="yourName1" type="text" name= "firstName"/><input type="submit" value="send" onclick="getName()"/></div>');
+  $("#firstBackground").append('<div class="yourName" id="name1">Enter Your Name<input id="yourName1" type="text" name= "firstName"/><input type="submit" value="Done!" onclick="getName()"/></div>');
 }
 
 function hideInstructions()
@@ -146,5 +146,6 @@ function getName()
 {
   $("#name1").fadeOut("slow");
   bigName = $("#yourName1").val();
-  alert(bigName);
+  // alert(bigName);
+  $(".username").text(bigName);
 }
