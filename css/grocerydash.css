@@ -3,29 +3,26 @@ div.background
 {
   height:320px;
   width:480px;
-  color: black;
-  background-color: beige;
+  color: #000000;
+  background-color: #FAEBD7;
 }
 
-
-#inputName
+/* classes */
+/* class attributes for all buttons that aren't their own class */
+.myButtons
 {
-  position: absolute;
-  height: 30px;
-  width: 50px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 10pt;
-  text-align: center;
-  top: 20px;
-  left: 50px;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
+ position: absolute;
+ background-color: #D2B48C;
+ padding: 2px 2px 2px 2px;
+ border-style: solid;
+ border-width: 2px;
+ border-color: #000000;
+ text-align: center;
+ font-size: 10pt;
+ color: #000000;
+ font-family: "Verdana";
+ margin: 6px 4px 6px 6px;
+ -webkit-border-radius: 4px;
 }
 
 .yourName
@@ -37,12 +34,12 @@ div.background
   padding: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #000000;
   font-size: 10pt;
   text-align: center;
   top: 80px;
   left: 150px;
-  color: black;
+  color: #000000;
   font-family: "Verdana"
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
@@ -57,60 +54,15 @@ div.background
   padding: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #000000;
   font-size: 10pt;
   text-align: center;
   top: 40px;
   left: 250px;
-  color: black;
+  color: #000000;
   font-family: "Verdana"
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
-}
-
-
-
-#instructions
-{
-  position: absolute;
-  height: 30px;
-  width: 120px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 10pt;
-  text-align: center;
-  top:20px;
-  left: 340px;
-  color: black;
-  font-family: "Verdana"
-
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-#title
-{
-  position: absolute;
-  border-color: black;
-  font-size: 20pt;
-  top:80px;
-  height: 100px;
-  width: 250px;
-  left: 120px;
-  text-align: center;
-  color: black;
-  font-family: "Verdana"
-}
-
-
-#resumeGame
-{
-  position: absolute;
-  top: 180px;
-  left: 320px;
 }
 
 div.resumeGame
@@ -119,7 +71,7 @@ div.resumeGame
   width: 175px;
   font-size: 12pt;
   text-align: center;
-  color: gray;
+  color: #808080;
   font-family: "Verdana"
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
@@ -127,19 +79,20 @@ div.resumeGame
 
 .score
 {
-  height: 128px;
-  width: 220px;
-  font-size: 13pt;
-  text-align:center;
-  color: black;
-  font-family: "Verdana"
-}
-
-#score, #score1
-{
-  position: absolute;
-  top: 243px;
-  left: 47px;
+ height: 128px;
+ width: 220px;
+ font-size: 13pt;
+ position: absolute;
+ background-color: #D2B48C;
+ padding: 2px 2px 2px 2px;
+ border-style: solid;
+ border-width: 2px;
+ border-color: #000000;
+ text-align: center;
+ color: #000000;
+ font-family: "Verdana";
+ margin: 6px 4px 6px 6px;
+ -webkit-border-radius: 4px;
 }
 
 .cart
@@ -151,210 +104,24 @@ div.resumeGame
   top:160px;
   left: 40px;
 }
-
-
 .milkType
 {
   height: 20px;
   width: 50px;
   left: 30px;
 }
-
-
-#oneDay
-{
-  position: absolute;
-  height: 30px;
-  width: 80px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 10pt;
-  text-align: center;
-  top:30px;
-  left: 120px;
-  color: black;
-  font-family: "Verdana"
-
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-
-#oneWeek
-{
-  position: absolute;
-  height: 30px;
-  width: 80px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 10pt;
-  text-align: center;
-  top:30px;
-  left: 240px;
-  color: black;
-  font-family: "Verdana"
-
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-#oneMonth
-{
-  position: absolute;
-  height: 30px;
-  width: 80px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 10pt;
-  text-align: center;
-  top:30px;
-  left: 360px;
-  color: black;
-  font-family: "Verdana"
-
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-#timer
-{
-  position: absolute;
-  height: 10px;
-  width: 20px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 6pt;
-  text-align: center;
-  top: 10px;
-  left: 360px;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-#score
-{
-  position: absolute;
-  height: 10px;
-  width: 30px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 6pt;
-  text-align: center;
-  top: 30px;
-  left: 360px;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
 .item
 {
   height: 20px;
   width: 50px;
-  background-color: tan;
+  background-color: #D2B48C;
   padding: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #000000;
   font-size: 8pt;
   text-align: center;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-#bonusRound
-{
-  position: absolute;
-  height: 25px;
-  width: 70px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 8pt;
-  text-align: center;
-  top: 10px;
-  left: 370px;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-
-#finalScore
-{
-  position: absolute;
-  height: 25px;
-  width: 150px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 8pt;
-  text-align: left;
-  top: 40px;
-  left: 150px;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-#finalTime
-{
-  position: absolute;
-  height: 25px;
-  width:150px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 8pt;
-  text-align: left;
-  top:70px;
-  left: 150px;
-  color: black;
-  font-family: "Verdana"
-  margin: 6px 4px 6px 6px;
-  -webkit-border-radius: 4px;
-}
-#finalList
-{
-  position: absolute;
-  height: 25px;
-  width: 150px;
-  background-color: tan;
-  padding: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  font-size: 8pt;
-  text-align: left;
-  top:100px;
-  left: 150px;
-  color: black;
+  color: #000000;
   font-family: "Verdana"
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
@@ -369,14 +136,154 @@ div.resumeGame
   padding: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #000000;
   font-size: 10pt;
   text-align: center;
   top: 40px;
   left: 50px;
-  color: black;
+  color: #000000;
   font-family: "Verdana"
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
 }
+
+
+
+/*ids */
+
+/* uses class myButtons */
+#inputName
+{
+  height: 30px;
+  width: 50px;
+  top: 20px;
+  left: 50px;
+}
+
+/* uses class myButtons */
+#instructions
+{
+  height: 30px;
+  width: 120px;
+  top:20px;
+  left: 340px;
+}
+
+#title
+{
+  position: absolute;
+  border-color: #000000;
+  font-size: 20pt;
+  top:80px;
+  height: 100px;
+  width: 250px;
+  left: 120px;
+  text-align: center;
+  color: #000000;
+  font-family: "Verdana"
+}
+
+/* uses class resumeGame */
+
+#resumeGame
+{
+  position: absolute;
+  top: 180px;
+  left: 320px;
+}
+
+/* uses class score */
+#score, #score1
+{
+  position: absolute;
+  top: 243px;
+  left: 47px;
+}
+
+/* uses class myButtons */
+#oneDay
+{
+  height: 30px;
+  width: 80px;
+  top:30px;
+  left: 120px;
+}
+/* uses class myButtons */
+#oneWeek
+{
+  height: 30px;
+  width: 80px;
+  top:30px;
+  left: 240px;
+}
+/* uses class myButtons */
+#oneMonth
+{
+  height: 30px;
+  width: 80px;
+  top:30px;
+  left: 360px;
+}
+
+/* uses class myButtons */
+#timer
+{
+  height: 10px;
+  width: 30px;
+  font-size: 6pt;
+  top: 10px;
+  left: 360px;
+}
+
+/* uses class store */
+#score
+{
+  height: 10px;
+  width: 30px;
+  font-size: 6pt;
+  top: 30px;
+  left: 360px;
+}
+
+/* button to go to bonus round. uses class myButtons */
+#bonusRound
+{
+  height: 25px;
+  width: 70px;
+  font-size: 8pt;
+  top: 10px;
+  left: 370px;
+}
+
+/* the final score box. uses class myButtons */
+#finalScore
+{
+  height: 25px;
+  width: 150px;
+  font-size: 8pt;
+  text-align: left;
+  top: 40px;
+  left: 150px;
+}
+/*the final time box uses class myButtons */
+#finalTime
+{
+  height: 25px;
+  width:150px;
+  text-align: left;
+  top:70px;
+  left: 150px;
+}
+
+/* list of things put into cart uses class myButtons  */
+#finalList
+{
+  height: 150px;
+  width: 150px;
+  font-size: 8pt;
+  text-align: left;
+  top:100px;
+  left: 150px;
+}
+
 
