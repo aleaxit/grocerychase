@@ -18,8 +18,8 @@
   <body>
 
   <div id="firstBackground" class="background">
-      <div id="inputName" onclick="nameWasTapped()"><span class="username">NAME</span></div>
-      <div id="instructions" onclick="instructionsWasTapped()">INSTRUCTIONS</div>
+      <div id="inputName" class="myButtons" onclick="nameWasTapped()"><span class="username">NAME</span></div>
+      <div id="instructions" class="myButtons" onclick="instructionsWasTapped()">INSTRUCTIONS</div>
       <div id="title">THE GREAT GROCERY CHASE</div>
       <div id="resumeGame" class="resumeGame" onclick="resumeWasTapped()">RESUME GAME</div>
       <div id="cart1" class="cart" onclick="cartWasTapped()"></div>
@@ -28,17 +28,21 @@
   <div id="selectPeriod">
     <div class="background">
       <div class="toolbar"><h3>Fill <span class="username">Julie</span>'s Cart For</h3></div>
-      <div id="oneDay">One Day</div>
-      <div id="oneWeek">One Week</div>
-      <div id="oneMonth">One Month</div>
+      <div id="oneDay" class="myButtons">One Day</div>
+      <div id="oneWeek" class="myButtons">One Week</div>
+      <div id="oneMonth" class="myButtons">One Month</div>
       <div id="cart2" class="cart" onclick="gotoaisle(0)"></div>
+      <div><input type=button value="Back" onClick="history.go(-1)"></div>
+      
     </div>
+        
+    
   </div>
 
   <div id="aisle">
     <div class="background">
       <div class="toolbar"><h3>Fill <span class="username">Julie</span>'s Cart With</h3></div>
-      <div id="timer">Timer</div>
+      <div id="timer" class="myButtons">Timer</div>
       <div id="items">ITEMS</div>
       <div id="score" class="score">SCORE</div>
       <div id="cart3" class="cart" onclick="gotoaisle(nextaisle)"></div>
@@ -48,11 +52,11 @@
   <div id="checkout">
     <div class="background">
       <div class="toolbar"><h3><span class="username">Julie</span>'s grocery chase</h3></div>
-      <div id="bonusRound" onclick="bonusroundWasTapped()">BONUS ROUND</div>
-      <div id="finalScore">FINAL SCORE:</div>
-      <div id="finalTime">FINAL TIME:</div>
-      <div id="finalList">FINAL LIST:</div>
-      <div class="score" id="score1">0 3 1 2 1 </div>
+      <div id="bonusRound" class="myButtons" onclick="bonusroundWasTapped()">BONUS ROUND</div>
+      <div id="finalScore" class="myButtons">FINAL SCORE:</div>
+      <div id="finalTime" class="myButtons">FINAL TIME:</div>
+      <div id="finalList" class="myButtons">FINAL LIST:</div>
+      <!--<div class="score" id="score1">0 3 1 2 1 </div>-->
       <div id="cart7" class="cart"></div>
     </div>
   </div>
