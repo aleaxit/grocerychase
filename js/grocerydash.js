@@ -31,16 +31,14 @@ function displayNoInput()
 function cartWasTapped()
 {
 	//alert("Clicked!");
-	//$("#cart1").fadeOut("slow");
-	jQT.goTo("#selectPeriod", 'flip');
+	jQT.goTo("#selectPeriod", 'slide');
 	
 }	
 
 function cartWasTapped1()
 {
 	//alert("Clicked!");
-	//$("#cart1").fadeOut("slow");
-	jQT.goTo("#selectItems1", 'flip');
+	jQT.goTo("#selectItems1", 'slide');
 	
 }
 
@@ -48,8 +46,7 @@ function cartWasTapped1()
 function cartWasTapped2()
 {
 	//alert("Clicked!");
-	//$("#cart1").fadeOut("slow");
-	jQT.goTo("#selectItems2", 'flip');
+	jQT.goTo("#selectItems2", 'slide');
 	
 }
 
@@ -57,16 +54,14 @@ function cartWasTapped2()
 function cartWasTapped3()
 {
 	//alert("Clicked!");
-	//$("#cart1").fadeOut("slow");
-	jQT.goTo("#selectItems3", 'flip');
+	jQT.goTo("#selectItems3", 'slide');
 	
 }
 
 function cartWasTapped4()
 {
 	//alert("Clicked!");
-	//$("#cart1").fadeOut("slow");
-	jQT.goTo("#selectItems4", 'flip');
+	jQT.goTo("#selectItems4", 'slide');
 	
 }
 

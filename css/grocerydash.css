@@ -109,15 +109,17 @@ div.background
 #resumeGame
 {
   position: absolute;
-  <!--background-image: url('../images/food-pyramid_1.jpg');-->
+  top: 180px;
+  left: 320px;
+}
 
+div.resumeGame
+{
   height: 128px;
   width: 175px;
   font-size: 12pt;
   text-align: center;
-  top: 180px;
-  left: 320px;
-  color: black;
+  color: gray;
   font-family: "Verdana"
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
