@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
+
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -27,48 +28,20 @@
   <div id="selectPeriod">
     <div class="background">
       <div class="toolbar"><h3>Fill My Cart For</h3></div>
-      <div id="oneDay" onclick="cartWasTapped1()">One Day</div>
+      <div id="oneDay">One Day</div>
       <div id="oneWeek">One Week</div>
       <div id="oneMonth">One Month</div>
-      <div id="cart2" class="cart" onclick="cartWasTapped1()"></div>
+      <div id="cart2" class="cart" onclick="gotoaisle(0)"></div>
     </div>
   </div>
 
-  <div id="selectItems1">
+  <div id="aisle">
     <div class="background">
       <div class="toolbar"><h3>Fill My Cart With</h3></div>
       <div id="timer">Timer</div>
-      <div id="milk" onclick="milkWasTapped()">MILK</div>
-      <div id="yogurt">Yogurt</div>
-      <div id="cheese">Cheese</div>
-      <div id="butter">Butter</div>
-      <div id="cart3" class="cart" onclick="cartWasTapped2()"></div>
-    </div>
-  </div>
-
-  <div id="selectItems2">
-    <div class="background">
-      <div class="toolbar"><h3>Fill My Cart With</h3></div>
-      <div id="timer">Timer</div>
-      <div id="meats">MEATS</div>
-      <div id="poultry">POULTRY</div>
-      <div id="fish">FISH</div>
-      <div id="eggs">EGGS</div>
-      <div class="score" id="score">0 1 0 1 0 </div>
-      <div id="cart4" class="cart" onclick="cartWasTapped3()"></div>
-    </div>
-  </div>
-
-  <div id="selectItems3">
-    <div class="background">
-      <div class="toolbar"><h3>Fill My Cart With</h3></div>
-      <div id="timer">Timer</div>
-      <div id="meats">FRUITS</div>
-      <div id="poultry">VEGGIES</div>
-      <div id="fish">JUICES</div>
-      <div id="eggs">BREADS</div>
-      <div class="score" id="score">0 3 1 2 1 </div>
-      <div id="cart5" class="cart" onclick="cartWasTapped4()"></div>
+      <div id="items">ITEMS</div>
+      <div id="score" class="score">SCORE</div>
+      <div id="cart3" class="cart" onclick="gotoaisle(nextaisle)"></div>
     </div>
   </div>
 
@@ -84,7 +57,7 @@
     </div>
   </div>
 
-  <div id="bonusround">
+  <div id="mysterybonusround">
     <div class="background">
       <div class="toolbar"><h3>Julie's grocery chase</h3></div>
       <!-- <div id="bonusRound">BONUS ROUND</div> -->
