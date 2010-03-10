@@ -103,7 +103,16 @@ div.resumeGame
   width: 128px;
   top:160px;
   left: 40px;
+  -webkit-transition-property: left;
+  -webkit-transition-duration: 2s;
 }
+
+.cart_moved
+{
+  left: 460px;
+}
+
+
 .milkType
 {
   height: 20px;
@@ -126,7 +135,11 @@ div.resumeGame
   margin: 6px 4px 6px 6px;
   -webkit-border-radius: 4px;
 }
+#items
+{
+ z-index:100;
 
+}
 .milkList
 {
   position: absolute;
@@ -181,6 +194,16 @@ div.resumeGame
   text-align: center;
   color: #000000;
   font-family: "Verdana"
+}
+
+#aisle_bg
+{
+  position: absolute;
+  top:80px;
+  left: 100px;
+  width: 320px;
+  height: 240px ;
+  background-color: red;
 }
 
 /* uses class resumeGame */
@@ -283,7 +306,7 @@ div.resumeGame
   font-size: 8pt;
   text-align: left;
   top:100px;
-  left: 150px;
+left: 150px;
 }
 
 
