@@ -25,21 +25,35 @@ function pageIsLoaded()
 
 function displayNoInput()
 {
-  //alert("No input was provided.") 
+ // alert("No input was provided.") 
 }
 
 function cartWasTapped()
 {
-  //alert("Clicked!");
-  jQT.goTo("#selectPeriod", 'slide');
-  
-} 
+ movetoslide("selectPeriod");
+  }
+
+function movetoslide(slide)
+{
+  //alert(slide);
+  $(".cart").addClass("cart_moved");
+  setTimeout("slide_mover('"+ slide + "')", 2000);
+
+}
+
+function slide_mover(slide)
+{
+ //alert(slide);
+ jQT.goTo('#' + slide, 'slide');
+ $(".cart").removeClass("cart_moved");
+
+}
 
 var nextaisle = 0;
 var itemsbyaisle = [
-  ['milk', 'cheese', 'yogurt'],
-  ['fruit', 'veggies', 'nuts'],
-  ['beef', 'chicken', 'fish', 'tofu']
+  ['dairy-aisle240ht.jpg', 'milk', 'cheese', 'yogurt'],
+  ['produce-aisle240ht.jpg','fruit', 'veggies', 'nuts'],
+  ['meat-aisle240ht.jpg','beef', 'chicken', 'fish', 'tofu']
   ];
 var purchased = [];
 
@@ -48,8 +62,10 @@ function buy(anitem) {
   $("#score").text(purchased.length);
 }
 
+
 function gotoaisle(whichaisle)
 {
+  $(".cart").addClass("cart_moved");
   if (whichaisle >= itemsbyaisle.length) {
     stopTimer();
     $("#score1").text(purchased.length);
@@ -63,25 +79,29 @@ function gotoaisle(whichaisle)
       finalist = finalist + ' ' + purchased[i];
     }
     $("#finalList").text(finalist);
-    jQT.goTo("#checkout", 'slide');
+    movetoslide("checkout");
   } else {
     nextaisle = whichaisle + 1;
+    var aisle_image;
+    aisle_image='url(images/' + itemsbyaisle[whichaisle][0] + ')';
+    $("#aisle_bg").css("background-image", aisle_image);
     $("#items").empty();
     $("#score").text(purchased.length);
     var i;
-    for(i=0; i<itemsbyaisle[whichaisle].length; ++i) {
+    for(i=1; i<itemsbyaisle[whichaisle].length; ++i) {
       var iname = itemsbyaisle[whichaisle][i];
       $("#items").append(
         '<button id="' + iname + '" class="item" ' +
-        'value="' + iname + '" onclick="buy(\'' +
+        'value="' + iname + '" onclick="itemWasTapped(\'' +
         iname + '\')">' + iname + '</button>'
         );
+   $(".cart").removeClass("cart_moved");
+        
     }
     if (whichaisle == 0) {
       startTimer();
-      jQT.goTo("#aisle", 'slide');
+      movetoslide("aisle");
     }
-    // TODO: move the cart!
   } 
 }
 
@@ -117,6 +137,16 @@ function startTimer() {
     curTime = 0;
     intervalId = setInterval(tick, 1000);
   }
+}
+
+function oneDayWasTapped()
+{
+  $("#selectPeriod").append('<div class="instructions1" id="help1" onclick="hideInstructions()">Goals: <li>Dairy-3 servings</li><li>Graines-5 servings</li><li>Veggies-3 servings</li><li>Fruit-3 servings</li></div>');
+}
+
+function itemWasTapped(anitem)
+{
+  $("#aisle").append('<div class="instructions1" id="help1" onclick="hideInstructions()">Organic, Regular... </div>');
 }
 
 
