@@ -30,23 +30,21 @@ function displayNoInput()
 
 function cartWasTapped()
 {
- movetoslide("selectPeriod");
+ moveCart("selectPeriod");
   }
 
-function movetoslide(slide)
+function moveCart(slide)
 {
   //alert(slide);
   $(".cart").addClass("cart_moved");
-  setTimeout("slide_mover('"+ slide + "')", 2000);
-
+    setTimeout("moveSlide('"+ slide + "')", 1000);
 }
 
-function slide_mover(slide)
+function moveSlide(slide)
 {
  //alert(slide);
  jQT.goTo('#' + slide, 'slide');
  $(".cart").removeClass("cart_moved");
-
 }
 
 var nextaisle = 0;
@@ -56,37 +54,48 @@ var itemsbyaisle = [
   ['meat-aisle240ht.jpg','beef', 'chicken', 'fish', 'tofu']
   ];
 var purchased = [];
-
+var scorecard = 0;
+var regex = /^(org)/
 function buy(anitem) {
+  woohoo();
   purchased.push(anitem);
-  $("#score").text(purchased.length);
+  $('.milkList').fadeOut('fast');
+  //alert('added ' + anitem + ' to cart');
+  if(regex.test(anitem))
+  {
+  scorecard = scorecard+2;
+  }
+  else {scorecard=scorecard+1;}
+  $("#score").text(scorecard);
 }
 
 
 function gotoaisle(whichaisle)
 {
-  $(".cart").addClass("cart_moved");
   if (whichaisle >= itemsbyaisle.length) {
     stopTimer();
-    $("#score1").text(purchased.length);
+    $("#score1").text(scorecard);
     showTimer("#finalTime", $("#finalTime").text() + ' ');
     $("#finalScore").text(
-        $("#finalScore").text() + ' ' + purchased.length
+        $("#finalScore").text() + ' ' + scorecard
         );
     var finalist = '';
     var i;
     for(i=0; i<purchased.length; ++i) {
-      finalist = finalist + ' ' + purchased[i];
+      finalist = finalist + ' ' + purchased[i] + '.';
     }
     $("#finalList").text(finalist);
-    movetoslide("checkout");
-  } else {
+    moveCart("checkout");
+  } else { 
+    $(".cart").addClass("cart_moved");  
+   // alert('nextaisle' + nextaisle);
     nextaisle = whichaisle + 1;
     var aisle_image;
     aisle_image='url(images/' + itemsbyaisle[whichaisle][0] + ')';
     $("#aisle_bg").css("background-image", aisle_image);
     $("#items").empty();
-    $("#score").text(purchased.length);
+    $("#score").text(scorecard);
+    $(".cart").removeClass("cart_moved");
     var i;
     for(i=1; i<itemsbyaisle[whichaisle].length; ++i) {
       var iname = itemsbyaisle[whichaisle][i];
@@ -95,12 +104,10 @@ function gotoaisle(whichaisle)
         'value="' + iname + '" onclick="itemWasTapped(\'' +
         iname + '\')">' + iname + '</button>'
         );
-   $(".cart").removeClass("cart_moved");
-        
     }
     if (whichaisle == 0) {
       startTimer();
-      movetoslide("aisle");
+      moveCart("aisle");
     }
   } 
 }
@@ -141,24 +148,101 @@ function startTimer() {
 
 function oneDayWasTapped()
 {
-  $("#selectPeriod").append('<div class="instructions1" id="help1" onclick="hideInstructions()">Goals: <li>Dairy-3 servings</li><li>Graines-5 servings</li><li>Veggies-3 servings</li><li>Fruit-3 servings</li></div>');
+  $("#selectPeriod").append('<div class="instructions1" id="oneday" onclick="hideInstructions()">Goals: <li>Dairy-3 servings</li><li>Grains-5 servings</li><li>Veggies-3 servings</li><li>Fruit-3 servings</li></div>');
 }
+
 
 function itemWasTapped(anitem)
 {
-  $("#aisle").append('<div class="instructions1" id="help1" onclick="hideInstructions()">Organic, Regular... </div>');
-}
-
-
-function milkWasTapped()
-{
-  $("#selectItems1").append('<div class="milkList" > <li><div class="milkType" id="whole" onclick="wholeWasClicked()">Whole</div><div class="milkType" id="2percent">2% Milk</div><div class="milkType" id="1percent">1% Milk</div></li> </div>');
+  $("#aisle").append('<div class="itemlist" id="Organic"onclick="showme(\'org' + anitem + '\')">Organic</div>');
+  $("#aisle").append('<div class="itemlist" id="Regular" onclick="showme(\'reg' + anitem + '\')">Regular</div>');
   
 }
 
+function woohoo()
+{
+  $(".milkList").addClass("listClicked");
+  $(".cart").addClass("cartBounce");
+  setTimeout(' $(".cart").removeClass("cartBounce")', 500);
+   }
+
+
+function showme(anitem)
+{
+  hideList();
+  switch(anitem)
+  {
+    case "regmilk":
+     $("#aisle").append('<div class="milkList" onclick="buy(\'regular milk\')"> <ul><li>"Whole Milk"</li><li>"Skim Milk"</li></ul>');
+        break;
+    case "orgmilk":
+     $("#aisle").append('<div class="milkList" onclick="buy(\'organic milk\')"> <ul><li>"Organic Whole Milk"</li><li>"Organic Skim Milk"</li></ul>');
+        break;
+
+        
+   case "regcheese":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'cheese\')"> <ul><li>"American"</li><li>"Cheddar"</li></ul>');
+       break;
+       
+   case "orgcheese":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'organic cheese\')"> <ul><li>"Gouda"</li><li>"Swiss"</li></ul>');
+       break;
+
+
+   case "regyogurt":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'yogurt\')"> <ul><li>"Chocolate"</li><li>"Vanilla"</li></ul>');
+       break;
+       
+   case "orgyogurt":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'organic yogurt\')"> <ul><li>"Organic Strawberry"</li><li>"Organic Plain"</li></ul>');
+       break;
+
+
+    case "regveggies":
+         $("#aisle").append('<div class="milkList" onclick="buy(\'veggies\')"> <ul><li>"Carrots"</li><li>"Mixed Greens"</li></ul>');
+         break;
+         
+    case "orgveggies":
+         $("#aisle").append('<div class="milkList" onclick="buy(\'organic veggies\')"> <ul><li>"Organic Carrots"</li><li>"Organic Mixed Greens"</li></ul>');
+         break;
+
+    case "regfruit":
+         $("#aisle").append('<div class="milkList" onclick="buy(\'fruit\')"> <ul><li>"Oranges"</li><li>"Apples"</li></ul>');
+         break;
+         
+    case "orgfruit":
+         $("#aisle").append('<div class="milkList" onclick="buy(\'organic fruit\')"> <ul><li>"Organic Oranges"</li><li>"Organic Apples"</li></ul>');
+         break;
+
+
+
+    case "regbeef":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'beef\')"> <ul><li>"Ground Beef"</li><li>"Steak"</li></ul>');
+       break;
+       
+   case "orgbeef":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'grassfed beef\')"> <ul><li>"GrassFed Lean Ground"</li><li>"GrassFed Steak"</li></ul>');
+       break;
+
+   case "regcheese":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'cheese\')"> <ul><li>"American"</li><li>"Cheddar"</li></ul>');
+       break;
+       
+   case "orgcheese":
+       $("#aisle").append('<div class="milkList" onclick="buy(\'organic cheese\')"> <ul><li>"Gouda"</li><li>"Swiss"</li></ul>');
+       break;
+
+
+    default:
+      alert("Sorry " + anitem + " isn't implemented yet");
+    }
+  setTimeout("$('.milkList').fadeOut('slow')", 4000);
+}
+
+
 function instructionsWasTapped()
 {
-  $("#firstBackground").append('<div class="instructions1" id="help1" onclick="hideInstructions()">These are the Instructions</div>');
+  $("#firstBackground").append('<div class="instructions1" onclick="hideInstructions()">These are the Instructions</div>');
 }
 
 function nameWasTapped()
@@ -166,9 +250,14 @@ function nameWasTapped()
   $("#firstBackground").append('<div class="yourName" id="name1">Enter Your Name<input id="yourName1" type="text" name= "firstName"/><input type="submit" value="Done!" onclick="getName()"/></div>');
 }
 
+function hideList()
+{
+  $('.itemlist').fadeOut("slow");
+
+}
 function hideInstructions()
 {
-  $("#help1").fadeOut("slow");
+  $('.instructions1').fadeOut("slow");
   
 }
 
