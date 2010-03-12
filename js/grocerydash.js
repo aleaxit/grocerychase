@@ -28,6 +28,11 @@ function displayNoInput()
  // alert("No input was provided.") 
 }
 
+function newGame()
+{
+
+
+}
 function cartWasTapped()
 {
  moveCart("selectProfile");
@@ -46,6 +51,8 @@ function moveSlide(slide)
  jQT.goTo('#' + slide, 'slide');
  $(".cart").removeClass("cart_moved");
 }
+
+
 
 var nextaisle = 0;
 var itemsbyaisle = [
@@ -127,6 +134,10 @@ function showTimer(where, prefix) {
   $(where).text(prefix + minutes + ":" + seconds);
 }
 
+function clearTimer(where, prefix) {
+	curTime=0;
+	$(where).text(prefix + '');
+}
 function tick() {
   curTime += 1;
   showTimer("#timer", '');
@@ -286,4 +297,15 @@ function getName()
   bigName = $("#yourName1").val();
   // alert(bigName);
   $(".username").text(bigName);
+}
+
+function newGame()
+{
+ purchased.length=0;
+ scorecard=0;
+ curTime=0;
+ $("#finalTime").text('');
+ $("#finalScore").text('');
+ moveCart('selectProfile');
+
 }
