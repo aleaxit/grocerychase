@@ -35,10 +35,20 @@
       <div id="oneMonth" class="myButtons">One Month</div>
       <div id="cart2" class="cart" onclick="gotoaisle(0)"></div>
       <div><input type=button value="Back" onClick="history.go(-1)"></div>
-      
+    </div> 
+  </div>
+  
+  <div id="selectProfile">
+    <div class="background">
+      <div class="toolbar"><h3><span class="username">Julie</span>'s food choices promote:</h3></div>
+      <div><input type=button value="Back" onClick="history.go(-1)"></div>
+      <form>    
+       <input type=checkbox value="Environment" onMouseOver="enviroGoals()" onMouseOut="hideInstructions()" />Environment</br>
+       <input type=checkbox value="Weight Loss" onMouseOver="weightGoals()" onMouseOut="hideInstructions()" />Weight Loss</br>
+       <input type=checkbox id="Diabetes" value="Diabetes" onMouseOver="diabetesGoals()" onMouseOut="hideInstructions()" />Diabetes II control
+      </form>
+      <div class="cart" onclick="moveCart('selectPeriod')"></div>
     </div>
-        
-    
   </div>
 
   <div id="aisle">

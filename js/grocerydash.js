@@ -30,7 +30,7 @@ function displayNoInput()
 
 function cartWasTapped()
 {
- moveCart("selectPeriod");
+ moveCart("selectProfile");
   }
 
 function moveCart(slide)
@@ -148,9 +148,22 @@ function startTimer() {
 
 function oneDayWasTapped()
 {
-  $("#selectPeriod").append('<div class="instructions1" id="oneday" onclick="hideInstructions()">Goals: <li>Dairy-3 servings</li><li>Grains-5 servings</li><li>Veggies-3 servings</li><li>Fruit-3 servings</li></div>');
+  $("#selectPeriod").append('<div class="instructions1" id="oneday" onclick="hideInstructions()">Goals:<br/> Dairy-3 servings<br/>Grains-5 servings<br/>Veggies-3 servings<br/>Fruit-3 servings<br/>Meat-3 servings</div>');
+}
+function enviroGoals()
+{
+  $("#selectProfile").append('<div class="instructions1" id="enviro" onclick="hideInstructions()">Hints:<br/>Focus on buying foods labelled <li> Organic </li><li> Locally-grown</li><li> Grass-fed</li><li> Cage-free</li><li> Wild-caught </li><br/>These foods are healthier for the environment and healthier for you as well. </div>');
 }
 
+function weightGoals()
+{
+  $("#selectProfile").append('<div class="instructions1" id="weightloss" onclick="hideInstructions()">Hints:<br/>Focus on buying foods labelled <li> Low-Fat </li><li> No Sugar Added</li><li> Single Serving</li> </div>');
+}
+
+function diabetesGoals()
+{
+  $("#selectProfile").append('<div class="instructions1" id="diabetic" onclick="hideInstructions()">Hints:<br/>Focus on buying foods labelled <li> Low-Carb, </li><li> Low Glycemic Index</li><li>No High-Fructose-Corn-Syrup</li></div>');
+}
 
 function itemWasTapped(anitem)
 {
@@ -158,6 +171,12 @@ function itemWasTapped(anitem)
   $("#aisle").append('<div class="itemlist" id="Regular" onclick="showme(\'reg' + anitem + '\')">Regular</div>');
   
 }
+
+function notImplemented()
+{
+  alert("Sorry, this choice isn't implemented yet.");
+}
+
 
 function woohoo()
 {
@@ -242,7 +261,7 @@ function showme(anitem)
 
 function instructionsWasTapped()
 {
-  $("#firstBackground").append('<div class="instructions1" onclick="hideInstructions()">These are the Instructions</div>');
+  $("#firstBackground").append('<div class="instructions1" onclick="hideInstructions()"><li>Click cart to move </li><li> Click food to see choices  </li><li> Scores based on profile preferences on next page </li><li> Click here to hide </div>');
 }
 
 function nameWasTapped()
