@@ -278,6 +278,15 @@ function instructionsWasTapped()
 function nameWasTapped()
 {
   $("#firstBackground").append('<div class="yourName" id="name1">Enter Your Name<input id="yourName1" type="text" name= "firstName"/><input type="submit" value="Done!" onclick="getName()"/></div>');
+  $("#yourName1").keypress(function (e) {
+    if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {  
+      getName();
+      return false;  
+    } else {  
+      return true;  
+    }  
+  });
+  $("#yourName1").focus();
 }
 
 function hideList()
