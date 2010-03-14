@@ -188,71 +188,35 @@ function woohoo()
   setTimeout(' $(".cart").removeClass("cartBounce")', 500);
 }
 
+var ittostrs = {
+  'regmilk': ['regular milk', 'Whole Milk', 'Skim Milk'],
+  'orgmilk': ['organic milk', 'Organic Whole Milk', 'Organic Skim Milk'],
+  'regcheese': ['cheese', 'American', 'Cheddar'],
+  'orgcheese': ['organic cheese', 'Gouda', 'Swiss'],
+  'regyogurt': ['yogurt', 'Chocolate', 'Vanilla'],
+  'orgyogurt': ['organic yogurt', 'Organic Strawberry', 'Organic Plain'],
+  'regveggies': ['veggies', 'Carrots', 'Mixed Greens'],
+  'orgveggies': ['organic veggies', 'Organic Carrots', 'Organic Mixed Greens'],
+  'regfruit': ['fruit', 'Oranges', 'Apples'],
+  'orgfruit': ['organic fruit', 'Organic Oranges', 'Organic Apples'],
+  'regbeef': ['beef', 'Ground Beef', 'Steak'],
+  'orgbeef': ['grassfed beef', 'GrassFed Lean Ground', 'GrassFed Steak']
+}
 
 function showme(anitem)
 {
   hideList();
-  switch(anitem)
-  {
-    case "regmilk":
-      $("#aisle").append('<div class="milkList" onclick="buy(\'regular milk\')"> <ul><li>"Whole Milk"</li><li>"Skim Milk"</li></ul>');
-      break;
-    case "orgmilk":
-      $("#aisle").append('<div class="milkList" onclick="buy(\'organic milk\')"> <ul><li>"Organic Whole Milk"</li><li>"Organic Skim Milk"</li></ul>');
-      break;
-
-   case "regcheese":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'cheese\')"> <ul><li>"American"</li><li>"Cheddar"</li></ul>');
-     break;
-
-   case "orgcheese":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'organic cheese\')"> <ul><li>"Gouda"</li><li>"Swiss"</li></ul>');
-     break;
-
-   case "regyogurt":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'yogurt\')"> <ul><li>"Chocolate"</li><li>"Vanilla"</li></ul>');
-     break;
-
-   case "orgyogurt":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'organic yogurt\')"> <ul><li>"Organic Strawberry"</li><li>"Organic Plain"</li></ul>');
-     break;
-
-  case "regveggies":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'veggies\')"> <ul><li>"Carrots"</li><li>"Mixed Greens"</li></ul>');
-     break;
-
-  case "orgveggies":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'organic veggies\')"> <ul><li>"Organic Carrots"</li><li>"Organic Mixed Greens"</li></ul>');
-     break;
-
-  case "regfruit":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'fruit\')"> <ul><li>"Oranges"</li><li>"Apples"</li></ul>');
-     break;
-
-  case "orgfruit":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'organic fruit\')"> <ul><li>"Organic Oranges"</li><li>"Organic Apples"</li></ul>');
-     break;
-
-
-  case "regbeef":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'beef\')"> <ul><li>"Ground Beef"</li><li>"Steak"</li></ul>');
-     break;
-
-   case "orgbeef":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'grassfed beef\')"> <ul><li>"GrassFed Lean Ground"</li><li>"GrassFed Steak"</li></ul>');
-     break;
-
-   case "regcheese":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'cheese\')"> <ul><li>"American"</li><li>"Cheddar"</li></ul>');
-     break;
-
-   case "orgcheese":
-     $("#aisle").append('<div class="milkList" onclick="buy(\'organic cheese\')"> <ul><li>"Gouda"</li><li>"Swiss"</li></ul>');
-     break;
-
-
-   default:
-     alert("Sorry " + anitem + " isn't implemented yet");
+  var itemprops = ittostrs[anitem];
+  if (itemprops) {
+    var val = '<div class="milkList" onclick="buy(\'' + itemprops[0] + '\')"> <ul>';
+    var i;
+    for(i=1; i < itemprops.length; ++i) {
+      val = val + '<li>"' + itemprops[i] + '"</li> ';
+    }
+    val = val + ' </ul>';
+    $("#aisle").append(val);
+  } else {
+    alert("Sorry " + anitem + " isn't implemented yet");
   }
   setTimeout("$('.milkList').fadeOut('slow')", 4000);
 }
