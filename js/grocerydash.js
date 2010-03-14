@@ -299,8 +299,8 @@ function newGame()
   purchased.length = 0;
   scorecard = 0;
   curTime = 0;
-  $("#finalTime").text('FINAL SCORE:');
-  $("#finalScore").text('FINAL TIME:');
+  $("#finalTime").text('FINAL TIME:');
+  $("#finalScore").text('FINAL SCORE:');
   $("#finalList").text('FINAL LIST:');
   moveCart('selectProfile');
 }
