@@ -213,7 +213,7 @@ function showme(anitem)
     for(i=1; i < itemprops.length; ++i) {
       val = val + '<li>"' + itemprops[i] + '"</li> ';
     }
-    val = val + ' </ul>';
+    val = val + ' </ul> </div>';
     $("#aisle").append(val);
   } else {
     alert("Sorry " + anitem + " isn't implemented yet");
