@@ -19,7 +19,7 @@ $(function() {
 function pageIsLoaded()
 {
   //$("#first-background");
-  //.bind("pageAnimationEnd");
+  //.bind("pageAnimatinnd");
   //displayNoInput();
 }
 
@@ -154,6 +154,16 @@ function oneDayWasTapped()
 {
   $("#selectPeriod").append('<div class="instructions1" id="oneday" onclick="hideInstructions()">Goals:<br/> Dairy-3 servings<br/>Grains-5 servings<br/>Veggies-3 servings<br/>Fruit-3 servings<br/>Meat-3 servings</div>');
 }
+
+function oneWeekWasTapped()
+{
+  $("#selectPeriod").append('<div class="instructions1" id="oneday" onclick="hideInstructions()">Goals:<br/> Dairy-21 servings<br/>Grains-35 servings<br/>Veggies-21 servings<br/>Fruit-21 servings<br/>Meat-21 servings</div>');
+}
+function oneMonthWasTapped()
+{
+  $("#selectPeriod").append('<div class="instructions1" id="oneday" onclick="hideInstructions()">Sorry, this option is not currently available</div>');
+}
+
 function enviroGoals()
 {
   $("#selectProfile").append('<div class="instructions1" id="enviro" onclick="hideInstructions()">Hints:<br/>Focus on buying foods labelled <li> Organic </li><li> Locally-grown</li><li> Grass-fed</li><li> Cage-free</li><li> Wild-caught </li><br/>These foods are healthier for the environment and healthier for you as well. </div>');
